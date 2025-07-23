@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Legal Solutions Portfolio</title>
+  <link rel="stylesheet" href="./styles.css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Poppins&display=swap" rel="stylesheet" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      overflow-x: hidden;
+    }
+
+    .poppins {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .garamond {
+      font-family: 'EB Garamond', serif;
+    }
+
+    .button {
+      background-color: #B68C5A;
+      color: #FFFFFF;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .header {
+      background-image: url(./images/banner.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 100%;
+      height: 100vh;
+    }
+
+.grid-shadow{
+    background-image: url(./images/grid-shadow.png);
+}
+</style>
+</head>
+
+<body>
+  <section class="poppins mt-16">
+    <nav class="flex flex-col 
+    md:flex-row gap-8 justify-evenly items-center">
+      <div>
+        <img src="./images/logo2.png" alt="Justice" />
+      </div>
+      <div class="flex flex-col justify-center items-center 
+      md:flex-row gap-8">
+        <h4 class="text-base flex justify-center items-center">Home</h4>
+        <h4 class="text-base flex justify-center items-center">
+          Services
+          <img src="./images/Navbar Frame.png" alt="Frame" />
+        </h4>
+        <h4 class="text-base flex justify-center items-center">
+          Cases
+          <img src="./images/Navbar Frame.png" alt="Frame" />
+        </h4>
+        <h4 class="text-base flex justify-center items-center">
+          Blog
+          <img src="./images/Navbar Frame.png" alt="Frame" />
+        </h4>
+        <h4 class="text-base flex justify-center items-center">
+          Contact Us
+          <img src="./images/Navbar Frame.png" alt="Frame" />
+        </h4>
+      </div>
+      <div>
+        <button class="button w-56 h-16 rounded-lg font-semibold">
+          Free Consultation
+        </button>
+      </div>
+    </nav>
+  </section>
+  <section class="header mb-[7.5rem] ml-auto mr-auto rounded-b-lg flex justify-center items-center">
+    <header class="gap-[1.5rem] flex flex-col justify-center items-center text-center px-4">
+      <h1 class="text-white garamond text-5xl 
+      md:text-7xl font-extrabold">
+        We Provide Effective<br />Legal Solutions
+      </h1>
+      <h4 class="text-white poppins font-normal">
+        There are many variations of passages of Lorem Ipsum available, but the majority<br class="hidden md:block" />
+        have suffered alteration in some form, by injected humour.
+      </h4>
+      <form action="" class="flex flex-col 
+      md:flex-row items-center gap-4">
+        <input
+          class="w-full font-normal bg-white poppins
+          md:w-[31.25rem] h-16 rounded-lg p-[1.25rem]"
+          type="text"
+          placeholder="Search your services"/>
+        <button
+          class="button w-full md:w-[9rem] h-16 text-white poppins text-xl font-semibold rounded-lg"
+          type="submit">
+          Search
+        </button>
+      </form>
+    </header>
+  </section>
+  <section class="mb-[7.5rem] ml-auto mr-auto flex flex-col justify-center items-center">
+    <div class="mb-16 flex flex-col justify-center items-center gap-6 text-center">
+        <h1 class="garamond text-[#414040] font-extrabold text-[2.5rem]">The Legal Practice Area</h1>
+        <h3 class="poppins text-[#707070] font-normal">There are many variations of passages of Lorem Ipsum available, but the majority have<br>suffered alteration in some form, by injected humour.</h3>
+    </div>
+    <div class="grid grid-cols-3 grid-rows-3 border-none text-center">
+        <div class="flex flex-col justify-center items-center gap-8 w-[25rem] h-[31.25rem]">
+            <img src="./images/business.png" alt="Order">
+            <h2 class="garamond text-[2rem] font-extrabold text-[#414040]">Business Law</h2>
+            <h3 class="poppins font-normal text-[#707070]">There are many variations of<br>passages of Lorem Ipsum<br>available, but the majority have<br>suffered alteration in some<br>form, by injected humour.</h3>
+            <img src="./images/Frame.png" alt="Frame">
+        </div>
+        <div class="grid-shadow flex flex-col justify-center items-center gap-8 w-[25rem] h-[31.25rem]">
+            <img src="./images/criminal.png" alt="Handcuff">
+            <h2 class="garamond text-[2rem] font-extrabold text-[#414040]">Criminal Law</h2>
+            <h3 class="poppins font-normal text-[#707070]">There are many variations of<br>passages of Lorem Ipsum<br>available, but the majority have<br>suffered alteration in some<br>form, by injected humour.</h3>
+            <img src="./images/Frame.png" alt="Frame">
+        </div>
+        <div class="flex flex-col justify-center items-center gap-8 w-[25rem] h-[31.25rem]">
+            <img src="./images/child.png" alt="Child">
+            <h2 class="garamond text-[2rem] font-extrabold text-[#414040]">Child Support</h2>
+            <h3 class="poppins font-normal text-[#707070]">There are many variations of<br>passages of Lorem Ipsum<br>available, but the majority have<br>suffered alteration in some<br>form, by injected humour.</h3>
+            <img src="./images/Frame.png" alt="Frame">
+        </div>
+        <div class="flex flex-col justify-center items-center gap-8 w-[25rem] h-[31.25rem]">
+            <img src="./images/education.png" alt="Education">
+            <h2 class="garamond text-[2rem] font-extrabold text-[#414040]">Education Law</h2>
+            <h3 class="poppins font-normal text-[#707070]">There are many variations of<br>passages of Lorem Ipsum<br>available, but the majority have<br>suffered alteration in some<br>form, by injected humour.</h3>
+            <img src="./images/Frame.png" alt="Frame">
+        </div>
+        <div class="flex flex-col justify-center items-center gap-8 w-[25rem] h-[31.25rem]">
+            <img src="./images/divorce.png" alt="Divorce">
+            <h2 class="garamond text-[2rem] font-extrabold text-[#414040]">Divorce Law</h2>
+            <h3 class="poppins font-normal text-[#707070]">There are many variations of<br>passages of Lorem Ipsum<br>available, but the majority have<br>suffered alteration in some<br>form, by injected humour.</h3>
+            <img src="./images/Frame.png" alt="Frame">
+        </div>
+        <div class="flex flex-col justify-center items-center gap-8 w-[25rem] h-[31.25rem]">
+            <img src="./images/tax.png" alt="Tax">
+            <h2 class="garamond text-[2rem] font-extrabold text-[#414040]">Tax Law</h2>
+            <h3 class="poppins font-normal text-[#707070]">There are many variations of<br>passages of Lorem Ipsum<br>available, but the majority have<br>suffered alteration in some<br>form, by injected humour.</h3>
+            <img src="./images/Frame.png" alt="Frame">
+        </div>
+    </div>
+  </section>
+</body>
+</html>
