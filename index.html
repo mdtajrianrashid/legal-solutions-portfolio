@@ -44,6 +44,15 @@
 .grid-shadow{
     background-image: url(./images/grid-shadow.png);
 }
+
+.review-background{
+    background-image: url(./images/slider-1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+}
+
 </style>
 </head>
 
@@ -81,7 +90,8 @@
       </div>
     </nav>
   </section>
-  <section class="header mb-[7.5rem] ml-auto mr-auto rounded-b-lg flex justify-center items-center">
+  <section class="header mb-0.5 
+  md:mb-[7.5rem] ml-auto mr-auto rounded-b-lg flex justify-center items-center">
     <header class="gap-[1.5rem] flex flex-col justify-center items-center text-center px-4">
       <h1 class="text-white garamond text-5xl 
       md:text-7xl font-extrabold">
@@ -111,42 +121,69 @@
         <h1 class="garamond text-[#414040] font-extrabold text-[2.5rem]">The Legal Practice Area</h1>
         <h3 class="poppins text-[#707070] font-normal">There are many variations of passages of Lorem Ipsum available, but the majority have<br>suffered alteration in some form, by injected humour.</h3>
     </div>
-    <div class="grid grid-cols-3 grid-rows-3 border-none text-center">
-        <div class="flex flex-col justify-center items-center gap-8 w-[25rem] h-[31.25rem]">
+    <div class="grid grid-cols-1 
+    md:grid-cols-3 text-center">
+        <!-- Row 1 -->
+        <div class="border-b border-t border-r-0 
+        md:border-t-0 md:border-r border-[#E7E7E7] flex flex-col justify-center items-center gap-8 w-[25rem] h-[31.25rem]">
             <img src="./images/business.png" alt="Order">
             <h2 class="garamond text-[2rem] font-extrabold text-[#414040]">Business Law</h2>
             <h3 class="poppins font-normal text-[#707070]">There are many variations of<br>passages of Lorem Ipsum<br>available, but the majority have<br>suffered alteration in some<br>form, by injected humour.</h3>
             <img src="./images/Frame.png" alt="Frame">
         </div>
-        <div class="grid-shadow flex flex-col justify-center items-center gap-8 w-[25rem] h-[31.25rem]">
+        
+        <div class="grid-shadow border-b border-t border-r-0 
+        md:border-t-0 md:border-r border-[#E7E7E7] flex flex-col justify-center items-center gap-8 w-[25rem] h-[31.25rem]">
             <img src="./images/criminal.png" alt="Handcuff">
             <h2 class="garamond text-[2rem] font-extrabold text-[#414040]">Criminal Law</h2>
             <h3 class="poppins font-normal text-[#707070]">There are many variations of<br>passages of Lorem Ipsum<br>available, but the majority have<br>suffered alteration in some<br>form, by injected humour.</h3>
             <img src="./images/Frame.png" alt="Frame">
         </div>
-        <div class="flex flex-col justify-center items-center gap-8 w-[25rem] h-[31.25rem]">
+        
+        <div class="border-b border-t 
+        md:border-t-0 border-[#E7E7E7] flex flex-col justify-center items-center gap-8 w-[25rem] h-[31.25rem]">
             <img src="./images/child.png" alt="Child">
             <h2 class="garamond text-[2rem] font-extrabold text-[#414040]">Child Support</h2>
             <h3 class="poppins font-normal text-[#707070]">There are many variations of<br>passages of Lorem Ipsum<br>available, but the majority have<br>suffered alteration in some<br>form, by injected humour.</h3>
             <img src="./images/Frame.png" alt="Frame">
         </div>
-        <div class="flex flex-col justify-center items-center gap-8 w-[25rem] h-[31.25rem]">
+        <!-- Row 2 -->
+        <div class="border-t border-b-0 border-r-0 
+        md:border-r md:border-b-0 border-[#E7E7E7] flex flex-col justify-center items-center gap-8 w-[25rem] h-[31.25rem]">
             <img src="./images/education.png" alt="Education">
             <h2 class="garamond text-[2rem] font-extrabold text-[#414040]">Education Law</h2>
             <h3 class="poppins font-normal text-[#707070]">There are many variations of<br>passages of Lorem Ipsum<br>available, but the majority have<br>suffered alteration in some<br>form, by injected humour.</h3>
             <img src="./images/Frame.png" alt="Frame">
         </div>
-        <div class="flex flex-col justify-center items-center gap-8 w-[25rem] h-[31.25rem]">
+        
+        <div class="border-t border-b border-l-0 border-r-0 
+        md:border-r md:border-b-0 border-[#E7E7E7] flex flex-col justify-center items-center gap-8 w-[25rem] h-[31.25rem]">
             <img src="./images/divorce.png" alt="Divorce">
             <h2 class="garamond text-[2rem] font-extrabold text-[#414040]">Divorce Law</h2>
             <h3 class="poppins font-normal text-[#707070]">There are many variations of<br>passages of Lorem Ipsum<br>available, but the majority have<br>suffered alteration in some<br>form, by injected humour.</h3>
             <img src="./images/Frame.png" alt="Frame">
         </div>
-        <div class="flex flex-col justify-center items-center gap-8 w-[25rem] h-[31.25rem]">
+        
+        <div class="border-b border-[#E7E7E7]
+        md:border-b-0 flex flex-col justify-center items-center gap-8 w-[25rem] h-[31.25rem]">
             <img src="./images/tax.png" alt="Tax">
             <h2 class="garamond text-[2rem] font-extrabold text-[#414040]">Tax Law</h2>
             <h3 class="poppins font-normal text-[#707070]">There are many variations of<br>passages of Lorem Ipsum<br>available, but the majority have<br>suffered alteration in some<br>form, by injected humour.</h3>
             <img src="./images/Frame.png" alt="Frame">
+        </div>
+    </div>
+  </section>
+  <section class="mb-[7.5rem] flex flex-col justify-center items-center text-center ml-auto mr-auto">
+    <div>
+        <h1 class="garamond text-[#414040] font-extrabold text-[2.5rem]">What Our Client Say</h1>
+        <h3 class="poppins text-[#707070] font-normal">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</h3>
+    </div>
+    <div class="review-background flex flex-col justify-center items-center">
+        <div class="">
+            <!-- <img src="./images/reviewer.JPG" alt="Reviewer-Image"> -->
+            <h1 class="garamond text-[#FFFFFF] font-extrabold text-[1.5rem]">Takian Rashid</h1>
+            <h2 class="poppins text-[#FFFFFF] font-normal">UIX Designer</h2>
+            <h3 class="poppins text-[#FFFFFF] font-normal">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur.</h3>
         </div>
     </div>
   </section>
