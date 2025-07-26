@@ -40,18 +40,30 @@
       width: 100%;
       height: 100vh;
     }
+    
+    .header-shadow {
+      background-image: url(./images/header-shadow.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 100%;
+      height: 100vh;
+    }
+    
+    .grid-shadow {
+      background-image: url(./images/grid-shadow.png);
+    }
+    
+    .review-background {
+      background-image: url(./images/slider-1.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
 
-.grid-shadow{
-    background-image: url(./images/grid-shadow.png);
-}
-
-.review-background{
-    background-image: url(./images/slider-1.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 100%;
-    height: 100vh;
-}
+    .review-shadow {
+      background-image: url(./images/review-shadow.png);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
 
 </style>
 </head>
@@ -92,7 +104,7 @@
   </section>
   <section class="header mb-0.5 
   md:mb-[7.5rem] ml-auto mr-auto rounded-b-lg flex justify-center items-center">
-    <header class="gap-[1.5rem] flex flex-col justify-center items-center text-center px-4">
+    <header class="header-shadow gap-[1.5rem] flex flex-col justify-center items-center text-center px-4">
       <h1 class="text-white garamond text-5xl 
       md:text-7xl font-extrabold">
         We Provide Effective<br />Legal Solutions
@@ -173,17 +185,17 @@
         </div>
     </div>
   </section>
-  <section class="mb-[7.5rem] flex flex-col justify-center items-center text-center ml-auto mr-auto">
+  <section class="mb-[7.5rem] flex flex-col justify-center items-center text-center gap-16 ml-auto mr-auto">
     <div>
-        <h1 class="garamond text-[#414040] font-extrabold text-[2.5rem]">What Our Client Say</h1>
-        <h3 class="poppins text-[#707070] font-normal">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</h3>
+        <h1 class="garamond text-[#414040] font-extrabold text-[2.5rem] mb-6">What Our Client Say</h1>
+        <h3 class="poppins text-[#707070] font-normal">There are many variations of passages of Lorem Ipsum available, but the majority have<br>suffered alteration in some form, by injected humour.</h3>
     </div>
-    <div class="review-background flex flex-col justify-center items-center">
-        <div class="">
-            <!-- <img src="./images/reviewer.JPG" alt="Reviewer-Image"> -->
-            <h1 class="garamond text-[#FFFFFF] font-extrabold text-[1.5rem]">Takian Rashid</h1>
-            <h2 class="poppins text-[#FFFFFF] font-normal">UIX Designer</h2>
-            <h3 class="poppins text-[#FFFFFF] font-normal">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur.</h3>
+    <div class="review-background w-full md:w-[73.125rem] h-auto md:h-[31.25rem] rounded-[0.5rem] flex flex-col justify-center items-center">
+        <div class="review-shadow w-full md:w-[73.125rem] h-auto md:h-[31.25rem] rounded-[0.5rem] flex flex-col justify-center items-center">
+            <img class="w-[4.375rem] h-[4.375rem] mb-2 md:mb-6 border-[0.125rem] rounded-[50%]" src="./images/Ellipse 1.png" alt="Reviewer-Image">
+            <h1 class="garamond mb-0 md:mb-1 text-[#FFFFFF] font-extrabold text-base md:text-[1.5rem]">Awlad Hossain</h1>
+            <h2 class="poppins mb-2 md:mb-8 text-[#FFFFFF] text-[0.8rem] md:text-base font-normal">UIX Designer</h2>
+            <h3 class="poppins text-[#FFFFFF] text-[0.8rem] md:text-base font-normal">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur.</h3>
         </div>
     </div>
   </section>
