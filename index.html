@@ -25,6 +25,19 @@
     .garamond {
       font-family: 'EB Garamond', serif;
     }
+
+    .link {
+      transition: all 0.3s ease;
+      text-decoration: none;
+      color: inherit;
+      display: inline-block;
+    }
+    
+    .link:hover {
+      color: #B68C5A;
+      transform: translateY(-2px) scale(1.03);
+      text-shadow: 0 0 8px rgba(182, 140, 90, 0.6);
+    }
     
     .button {
       background-color: #B68C5A;
@@ -52,6 +65,17 @@
       transform: scale(1.05);
       filter: drop-shadow(0 0 12px #B68C5A) drop-shadow(0 0 24px #B68C5A);
     }
+
+    .grid-hover {
+      transition: all 0.4s ease;
+      cursor: pointer;
+    }
+    
+    .grid-hover:hover {
+      background-color: rgba(255, 240, 220, 0.3);
+      transform: scale(1.03);
+      box-shadow: 0 8px 24px rgba(182, 140, 90, 0.6), 0 0 12px rgba(182, 140, 90, 0.7);
+    }
     
     .header {
       background-image: url(./images/banner.png);
@@ -65,20 +89,37 @@
       background-position: center;
     }
     
-    .grid-shadow {
-      background-image: url(./images/grid-shadow.png);
-    }
-    
     .review-background {
-      background-image: url(./images/slider-1.jpg);
       background-repeat: no-repeat;
       background-position: center;
+      background-size: cover;
+      width: 100%;
+      height: 100vh;
+      animation: slideBackground 15s infinite;
+    }
+    
+    @keyframes slideBackground {
+      0% {
+        background-image: url('./images/slider-1.jpg');
+      }
+      33% {
+        background-image: url('./images/slider-2.jpg');
+      }
+      66% {
+        background-image: url('./images/slider-3.jpg');
+      }
+      100% {
+        background-image: url('./images/slider-1.jpg');
+      }
     }
 
     .review-shadow {
       background-image: url(./images/review-shadow.png);
       background-repeat: no-repeat;
       background-position: center;
+      background-size: cover;
+      width: 100%;
+      height: 100vh;
     }
 
     .FAQ-background {
@@ -86,7 +127,18 @@
       background-repeat: no-repeat;
       background-position: center;
     }
-
+    
+    @media (max-width: 768px) {
+      .review-background {
+        height: 70vh;
+        background-position: top;
+      }
+      
+      .review-shadow {
+        height: 70vh;
+        background-position: top;
+      }
+    }
 </style>
 </head>
 
@@ -99,23 +151,23 @@
       </div>
       <div class="flex flex-col justify-center items-center 
       md:flex-row gap-8">
-        <h4 class="text-base flex justify-center items-center">Home</h4>
-        <h4 class="text-base flex justify-center items-center">
+        <a class="link" href=""><h4 class="text-base flex justify-center items-center">Home</h4></a>
+        <a class="link" href=""><h4 class="text-base flex justify-center items-center">
           Services
           <img src="./images/Navbar Frame.png" alt="Frame" />
-        </h4>
-        <h4 class="text-base flex justify-center items-center">
+        </h4></a>
+        <a class="link" href=""><h4 class="text-base flex justify-center items-center">
           Cases
           <img src="./images/Navbar Frame.png" alt="Frame" />
-        </h4>
-        <h4 class="text-base flex justify-center items-center">
+        </h4></a>
+        <a class="link" href=""><h4 class="text-base flex justify-center items-center">
           Blog
           <img src="./images/Navbar Frame.png" alt="Frame" />
-        </h4>
-        <h4 class="text-base flex justify-center items-center">
+        </h4></a>
+        <a class="link" href=""><h4 class="text-base flex justify-center items-center">
           Contact Us
           <img src="./images/Navbar Frame.png" alt="Frame" />
-        </h4>
+        </h4></a>
       </div>
       <div>
         <button class="button w-56 h-16 rounded-lg font-semibold">
@@ -147,10 +199,9 @@
         <h1 class="garamond text-[#414040] font-extrabold text-[2.5rem]">The Legal Practice Area</h1>
         <h3 class="poppins text-[#707070] font-normal">There are many variations of passages of Lorem Ipsum available, but the majority have<br>suffered alteration in some form, by injected humour.</h3>
     </div>
-    <div class="grid grid-cols-1 
-    md:grid-cols-3 text-center">
+    <div class="grid grid-cols-1 md:grid-cols-3 text-center">
         
-        <div class="border-b border-t border-r-0 
+        <div class="grid-hover border-b border-t border-r-0 
         md:border-t-0 md:border-r border-[#E7E7E7] flex flex-col justify-center items-center gap-8 md:w-[25rem] h-[31.25rem]">
             <img src="./images/business.png" alt="Order">
             <h2 class="garamond text-[2rem] font-extrabold text-[#414040]">Business Law</h2>
@@ -158,7 +209,7 @@
             <img src="./images/Frame.png" alt="Frame">
         </div>
         
-        <div class="grid-shadow border-b border-t border-r-0 
+        <div class="grid-hover border-b border-t border-r-0 
         md:border-t-0 md:border-r border-[#E7E7E7] flex flex-col justify-center items-center gap-8 md:w-[25rem] h-[31.25rem]">
             <img src="./images/criminal.png" alt="Handcuff">
             <h2 class="garamond text-[2rem] font-extrabold text-[#414040]">Criminal Law</h2>
@@ -166,23 +217,21 @@
             <img src="./images/Frame.png" alt="Frame">
         </div>
 
-        <div class="border-b border-t 
-        md:border-t-0 border-[#E7E7E7] flex flex-col justify-center items-center gap-8 md:w-[25rem] h-[31.25rem]">
+        <div class="grid-hover border-b border-t md:border-t-0 border-[#E7E7E7] flex flex-col justify-center items-center gap-8 md:w-[25rem] h-[31.25rem]">
             <img src="./images/child.png" alt="Child">
             <h2 class="garamond text-[2rem] font-extrabold text-[#414040]">Child Support</h2>
             <h3 class="poppins font-normal text-[#707070]">There are many variations of<br>passages of Lorem Ipsum<br>available, but the majority have<br>suffered alteration in some<br>form, by injected humour.</h3>
             <img src="./images/Frame.png" alt="Frame">
         </div>
         
-        <div class="border-t border-b-0 border-r-0 
-        md:border-r md:border-b-0 border-[#E7E7E7] flex flex-col justify-center items-center gap-8 md:w-[25rem] h-[31.25rem]">
+        <div class="grid-hover border-t border-b-0 border-r-0 md:border-r md:border-b-0 border-[#E7E7E7] flex flex-col justify-center items-center gap-8 md:w-[25rem] h-[31.25rem]">
             <img src="./images/education.png" alt="Education">
             <h2 class="garamond text-[2rem] font-extrabold text-[#414040]">Education Law</h2>
             <h3 class="poppins font-normal text-[#707070]">There are many variations of<br>passages of Lorem Ipsum<br>available, but the majority have<br>suffered alteration in some<br>form, by injected humour.</h3>
             <img src="./images/Frame.png" alt="Frame">
         </div>
         
-        <div class="border-t border-b border-l-0 border-r-0 
+        <div class="grid-hover border-t border-b border-l-0 border-r-0 
         md:border-r md:border-b-0 border-[#E7E7E7] flex flex-col justify-center items-center gap-8 md:w-[25rem] h-[31.25rem]">
             <img src="./images/divorce.png" alt="Divorce">
             <h2 class="garamond text-[2rem] font-extrabold text-[#414040]">Divorce Law</h2>
@@ -190,8 +239,7 @@
             <img src="./images/Frame.png" alt="Frame">
         </div>
         
-        <div class="border-b border-[#E7E7E7]
-        md:border-b-0 flex flex-col justify-center items-center gap-8 md:w-[25rem] h-[31.25rem]">
+        <div class="grid-hover border-b border-[#E7E7E7] md:border-b-0 flex flex-col justify-center items-center gap-8 md:w-[25rem] h-[31.25rem]">
             <img src="./images/tax.png" alt="Tax">
             <h2 class="garamond text-[2rem] font-extrabold text-[#414040]">Tax Law</h2>
             <h3 class="poppins font-normal text-[#707070]">There are many variations of<br>passages of Lorem Ipsum<br>available, but the majority have<br>suffered alteration in some<br>form, by injected humour.</h3>
@@ -208,8 +256,10 @@
     </h3>
   </div>
 
-  <div class="review-background w-full md:w-[73.125rem] h-auto md:h-[31.25rem] rounded-[0.5rem] flex justify-center items-center">
-    <div class="review-shadow w-full md:w-[73.125rem] h-auto md:h-[31.25rem] rounded-[0.5rem] flex flex-col justify-center items-center text-center px-4 md:px-24 py-6 md:py-12">
+  <div class="review-background rounded-[0.5rem] flex justify-center items-center">
+
+    <!-- w-full md:w-[73.125rem] h-auto md:h-[31.25rem] -->
+    <div class="review-shadow rounded-[0.5rem] flex flex-col justify-center items-center text-center px-4 md:px-24 py-6 md:py-12">
       <img class="w-16 h-16 md:w-[4.375rem] md:h-[4.375rem] mb-2 md:mb-6 border-[0.125rem] rounded-full" src="./images/Ellipse 1.png" alt="Reviewer-Image">
       <h1 class="garamond mb-1 text-[#FFFFFF] font-extrabold text-base md:text-[1.5rem]">Awlad Hossain</h1>
       <h2 class="poppins mb-3 md:mb-6 text-[#FFFFFF] text-sm md:text-base font-normal">UIX Designer</h2>
@@ -228,19 +278,19 @@
   </div>
   <div class="flex flex-col-reverse md:flex-row justify-center items-center">
     <div>
-      <div class="FAQ-background flex justify-center items-center mb-10 w-80 md:w-[35.625rem] h-[6.25rem] gap-4 md:gap-16">
+      <div class="grid-hover FAQ-background flex justify-center items-center mb-10 w-80 md:w-[35.625rem] h-[6.25rem] gap-4 md:gap-16">
         <h2 class="garamond mb-1 text-[#414040] font-extrabold text-base md:text-[1.5rem]">1. Are application fee waivers available?</h2>
         <img src="./images/FAQ +.png" alt="Additional Information">
       </div>
-      <div class="FAQ-background flex justify-center items-center mb-[1.875rem] w-80 md:w-[35.625rem] h-[6.25rem] gap-4 md:gap-16">
+      <div class="grid-hover FAQ-background flex justify-center items-center mb-[1.875rem] w-80 md:w-[35.625rem] h-[6.25rem] gap-4 md:gap-16">
         <h2 class="garamond mb-1 text-[#414040] font-extrabold text-base md:text-[1.5rem]">2. Are application fee waivers available?</h2>
         <img src="./images/FAQ +.png" alt="Additional Information">
       </div>
-      <div class="FAQ-background flex justify-center items-center mb-[1.875rem] w-80 md:w-[35.625rem] h-[6.25rem] gap-4 md:gap-16">
+      <div class="grid-hover FAQ-background flex justify-center items-center mb-[1.875rem] w-80 md:w-[35.625rem] h-[6.25rem] gap-4 md:gap-16">
         <h2 class="garamond mb-1 text-[#414040] font-extrabold text-base md:text-[1.5rem]">3. Are application fee waivers available?</h2>
         <img src="./images/FAQ +.png" alt="Additional Information">
       </div>
-      <div class="FAQ-background flex justify-center items-center mb-[1.875rem] w-80 md:w-[35.625rem] h-[6.25rem] gap-4 md:gap-16">
+      <div class="grid-hover FAQ-background flex justify-center items-center mb-[1.875rem] w-80 md:w-[35.625rem] h-[6.25rem] gap-4 md:gap-16">
         <h2 class="garamond mb-1 text-[#414040] font-extrabold text-base md:text-[1.5rem]">4. Are application fee waivers available?</h2>
         <img src="./images/FAQ +.png" alt="Additional Information">
       </div>
@@ -257,24 +307,24 @@
   </div>
   <div class="flex flex-col md:flex-row justify-center items-center gap-[1.875rem]">
     <div class="grid grid-cols-1 md:grid-cols-2 grid-rows-1 md:grid-rows-2">
-      <div class="border-b border-t border-r-0 
+      <div class="grid-hover border-b border-t border-r-0 
         md:border-t-0 md:border-r border-[#b8b8b8] flex flex-col justify-center items-center gap-4 w-[17.8125rem] h-[17.8125rem] bg-[#F3F3F3]">
         <img src="./images/location.png" alt="Location">
         <h1 class="garamond mb-1 text-[#414040] font-extrabold text-base md:text-[1.5rem]">Address</h1>
         <h3 class="poppins text-[#707070] text-sm md:text-base font-normal leading-relaxed">A108 Adam Street,<br>New York, NY 535022</h3>
       </div>
-      <div class="border-b border-t md:border-t-0 border-[#b8b8b8] flex flex-col justify-center items-center gap-4 w-[17.8125rem] h-[17.8125rem] bg-[#F3F3F3]">
+      <div class="grid-hover border-b border-t md:border-t-0 border-[#b8b8b8] flex flex-col justify-center items-center gap-4 w-[17.8125rem] h-[17.8125rem] bg-[#F3F3F3]">
         <img src="./images/call.png" alt="Call">
         <h1 class="garamond mb-1 text-[#414040] font-extrabold text-base md:text-[1.5rem]">Call Us</h1>
         <h3 class="poppins text-[#707070] text-sm md:text-base font-normal leading-relaxed">+88 01750 00 00 00<br>+88 01750 00 00 00</h3>
       </div>
-      <div class="border-t border-r-0 
+      <div class="grid-hover border-t border-r-0 
         md:border-t-0 md:border-r border-[#b8b8b8] flex flex-col justify-center items-center gap-4 w-[17.8125rem] h-[17.8125rem] bg-[#F3F3F3]">
         <img src="./images/email.png" alt="Email">
         <h1 class="garamond mb-1 text-[#414040] font-extrabold text-base md:text-[1.5rem]">Email Us</h1>
         <h3 class="poppins text-[#707070] text-sm md:text-base font-normal leading-relaxed">info@gmail.com<br>info@gmail.com</h3>
       </div>
-      <div class="border-t md:border-t-0 border-b md:border-b-0 border-[#b8b8b8] flex flex-col justify-center items-center gap-4 w-[17.8125rem] h-[17.8125rem] bg-[#F3F3F3]">
+      <div class="grid-hover border-t md:border-t-0 border-b md:border-b-0 border-[#b8b8b8] flex flex-col justify-center items-center gap-4 w-[17.8125rem] h-[17.8125rem] bg-[#F3F3F3]">
         <img src="./images/time.png" alt="Clock">
         <h1 class="garamond mb-1 text-[#414040] font-extrabold text-base md:text-[1.5rem]">Working Hours</h1>
         <h3 class="poppins text-[#707070] text-sm md:text-base font-normal leading-relaxed">Mon-Fri: 9AM to 5PM<br>Sunday: 9AM to 1 PM</h3>
@@ -299,11 +349,11 @@
     <div class="flex flex-col justify-center md:justify-start items-center md:items-start gap-4 md:gap-12">
       <h1 class="garamond mt-0 md:mt-16 text-white font-extrabold text-base md:text-[1.5rem]">Useful Links</h1>
       <ul class="text-[#CFCFCF] space-y-4">
-        <li>Homes</li>
-        <li>About Us</li>
-        <li>Cases</li>
-        <li>Blog</li>
-        <li>Contact Us</li>
+        <li><a class="link" href="">Homes</a></li>
+        <li><a class="link" href="">About Us</a></li>
+        <li><a class="link" href="">Cases</a></li>
+        <li><a class="link" href="">Blog</a></li>
+        <li><a class="link" href="">Contact Us</a></li>
       </ul>
     </div>
     <div class="flex flex-col justify-center md:justify-start items-center md:items-start gap-4 md:gap-4">
